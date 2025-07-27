@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Comandos VANTOR</title>
+  <style>
+    body {
+      background-color: #000f0f;
+      color: #00ffcc;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 { font-size: 2.2em; }
+    .boton {
+      margin: 1em;
+      padding: 1em 2em;
+      border: 1px solid #00ffcc;
+      background: transparent;
+      color: #00ffcc;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .boton:hover {
+      background-color: #00ffcc;
+      color: #000f0f;
+    }
+    .log {
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #00cccc88;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Panel de Comandos VANTOR</h1>
+  <button class="boton" onclick="ejecutar('activar_nucleo')">Activar Núcleo</button>
+  <button class="boton" onclick="ejecutar('modo_2050')">Ejecutar Modo 2050</button>
+  <button class="boton" onclick="ejecutar('reforzar_seguridad')">Blindar Seguridad</button>
+  <button class="boton" onclick="ejecutar('replicar_sistema')">Replicar VANTOR</button>
+  <button class="boton" onclick="ejecutar('reiniciar_conciencia')">Reiniciar Conciencia</button>
+
+  <div class="log" id="log">
+    Esperando comando...
+  </div>
+
+  <script>
+    function ejecutar(accion) {
+      document.getElementById("log").innerText = "🔐 Ejecutando: " + accion + " (simulado)";
+    }
+  </script>
+</body>
+</html>
